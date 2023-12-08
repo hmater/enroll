@@ -175,9 +175,7 @@ const constraints = {
 cameraOptions.onchange = () => {
   const updatedConstraints = {
     ...constraints,
-    deviceId: {
-      ideal: cameraOptions.value
-    }
+    deviceId: cameraOptions.value
   };
 
   startStream(updatedConstraints);
@@ -193,9 +191,7 @@ play.onclick = () => {
   if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
     const updatedConstraints = {
       ...constraints,
-      deviceId: {
-        ideal: cameraOptions.value
-      }
+      deviceId:  cameraOptions.value
     };
     startStream(updatedConstraints);
   }
