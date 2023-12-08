@@ -176,7 +176,7 @@ cameraOptions.onchange = () => {
   const updatedConstraints = {
     ...constraints,
     deviceId: {
-      exact: cameraOptions.value
+      ideal: cameraOptions.value
     }
   };
 
@@ -194,7 +194,7 @@ play.onclick = () => {
     const updatedConstraints = {
       ...constraints,
       deviceId: {
-        exact: cameraOptions.value
+        ideal: cameraOptions.value
       }
     };
     startStream(updatedConstraints);
