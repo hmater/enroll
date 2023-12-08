@@ -168,10 +168,10 @@ const constraints = {
       min: 720,
       ideal: 1080,
       max: 1440
-    },
+    }/*,
     facingMode: {
       exact: 'environment'
-    }
+    }*/
   }
 };
 
@@ -179,7 +179,7 @@ cameraOptions.onchange = () => {
   const updatedConstraints = {
     ...constraints,
     deviceId: {
-      exact: cameraOptions.value
+      ideal: cameraOptions.value
     }
   };
 
